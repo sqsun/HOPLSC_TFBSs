@@ -4,7 +4,7 @@ clc
 
 addpath( genpath(pwd) );
 
-Dataset_name = {'AgaR'};
+Dataset_name = {'AraC'};
 % Dataset_name = loadingDatasets;
 
 %=============================================
@@ -99,6 +99,7 @@ for iDB = 1:length( Dataset_name )% DB is data base; and length(DB) is number of
     results.stdF = std( F_measure );
     results.numPos = num_class(1);
     save(['res_' 'hopls_' TFBS_name ],  'results');
+    results
     clear results
 end
 
